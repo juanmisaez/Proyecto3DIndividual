@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class CompanionController : MonoBehaviour
 {
-    //private Rigidbody _rb;
-    private Animator _anim;
     private InputSystemKeyboard _input;
     private CharacterController _controller;
+
 
     public float speed;
     public float gravity = -9.81f; // falta terminar
@@ -16,12 +15,9 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        //_rb = GetComponent<Rigidbody>();
-        _anim = GetComponent<Animator>();
         _input = GetComponent<InputSystemKeyboard>();
         _controller = GetComponent<CharacterController>();
     }
-
 
     void Update()
     {
@@ -35,20 +31,5 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         _controller.Move(velocity * Time.deltaTime);
-    }
-
-    void Tripping()
-    {
-        _anim.SetBool("hit", true);
-    }
-
-    void OnEnable()
-    {
-        GetComponent<HealthSystem>().Stumble += Tripping;
-    }
-
-    void OnDisable()
-    {
-        GetComponent<HealthSystem>().Stumble -= Tripping;
     }
 }
