@@ -43,13 +43,11 @@ public class FollowSystem : MonoBehaviour
         {
             //follow = true;
             TeamUp();
-            Debug.Log("Te sigo!");
         }
     }
 
     void TeamUp()
     {
-        Debug.Log("Input y controller: ON");
         gameObject.GetComponent<InputSystemKeyboard>().enabled = true;
         gameObject.GetComponent<CompanionController>().enabled = true;
     }
