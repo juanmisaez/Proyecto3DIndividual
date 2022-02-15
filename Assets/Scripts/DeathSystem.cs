@@ -15,7 +15,7 @@ public class DeathSystem : MonoBehaviour
         GetComponent<HealthSystem>().Death -= Dead;
     }
 
-    private void Dead()
+    protected virtual void Dead()
     {
         gameObject.SetActive(false);
     }
