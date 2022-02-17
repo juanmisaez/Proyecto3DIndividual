@@ -23,6 +23,8 @@ public class WriteNumSoldierSystem : MonoBehaviour
     public void DeadSoldier()
     {
         numSoldier -= 1;
+        if (numSoldier <= 0)
+            numSoldier = 0;
         SoldierUpdated(GetNumSoldier());
     }
 
