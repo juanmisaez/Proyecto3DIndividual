@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -342,6 +342,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1998399290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &163460005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 928723031, guid: 44e54165d41e34c41ba73a629630ce03,
+    type: 3}
+  m_PrefabInstance: {fileID: 1592809820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &178217991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9215354449673965629, guid: cbaa879082db16045b6b84289c17bfbb,
@@ -353,6 +359,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 880970725214738984, guid: c60edd51c065ceb46b345849a03bc106,
     type: 3}
   m_PrefabInstance: {fileID: 1571203264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &228617109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 928723031, guid: 44e54165d41e34c41ba73a629630ce03,
+    type: 3}
+  m_PrefabInstance: {fileID: 669242157}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &229320727
 PrefabInstance:
@@ -1251,6 +1263,12 @@ Transform:
   m_Father: {fileID: 2013395226}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &496654725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 928723031, guid: 44e54165d41e34c41ba73a629630ce03,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998399290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &507955974
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1814,6 +1832,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818299150}
     m_Modifications:
+    - target: {fileID: -798416520308317950, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: orc
+      value: 
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 306514543, guid: 44e54165d41e34c41ba73a629630ce03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2
@@ -1870,12 +1893,37 @@ PrefabInstance:
         type: 3}
       propertyPath: orc
       value: 
-      objectReference: {fileID: 1547383896}
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: stoppingDistance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[0]
+      value: 
+      objectReference: {fileID: 496654725}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1159119862}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[2]
+      value: 
+      objectReference: {fileID: 228617109}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[3]
+      value: 
+      objectReference: {fileID: 163460005}
     - target: {fileID: 3897109859127448212, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: player
@@ -3177,7 +3225,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7783934, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3201,6 +3249,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 13.205, y: 0, z: 0}
+--- !u!1 &1159119862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 928723031, guid: 44e54165d41e34c41ba73a629630ce03,
+    type: 3}
+  m_PrefabInstance: {fileID: 1270375859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182328684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,6 +3355,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818299150}
     m_Modifications:
+    - target: {fileID: -798416520308317950, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: orc
+      value: 
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 928723031, guid: 44e54165d41e34c41ba73a629630ce03, type: 3}
       propertyPath: m_Name
       value: Soldier
@@ -3353,12 +3412,37 @@ PrefabInstance:
         type: 3}
       propertyPath: orc
       value: 
-      objectReference: {fileID: 1547383896}
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: stoppingDistance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[0]
+      value: 
+      objectReference: {fileID: 496654725}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1159119862}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[2]
+      value: 
+      objectReference: {fileID: 228617109}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[3]
+      value: 
+      objectReference: {fileID: 163460005}
     - target: {fileID: 3897109859127448212, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: player
@@ -3745,6 +3829,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbaa879082db16045b6b84289c17bfbb, type: 3}
+--- !u!1 &1344779474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2882819057380997079, guid: e676fb86a07b36b4288d088553127f0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 604955820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1367856470
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,6 +4841,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818299150}
     m_Modifications:
+    - target: {fileID: -798416520308317950, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: orc
+      value: 
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 928723031, guid: 44e54165d41e34c41ba73a629630ce03, type: 3}
       propertyPath: m_Name
       value: Soldier
@@ -4803,12 +4898,37 @@ PrefabInstance:
         type: 3}
       propertyPath: orc
       value: 
-      objectReference: {fileID: 1547383896}
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: stoppingDistance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[0]
+      value: 
+      objectReference: {fileID: 496654725}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1159119862}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[2]
+      value: 
+      objectReference: {fileID: 228617109}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[3]
+      value: 
+      objectReference: {fileID: 163460005}
     - target: {fileID: 3897109859127448212, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: player
@@ -5523,6 +5643,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 818299150}
     m_Modifications:
+    - target: {fileID: -798416520308317950, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: orc
+      value: 
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 306514543, guid: 44e54165d41e34c41ba73a629630ce03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.43
@@ -5579,12 +5704,37 @@ PrefabInstance:
         type: 3}
       propertyPath: orc
       value: 
-      objectReference: {fileID: 1547383896}
+      objectReference: {fileID: 1344779474}
     - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: stoppingDistance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[0]
+      value: 
+      objectReference: {fileID: 496654725}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1159119862}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[2]
+      value: 
+      objectReference: {fileID: 228617109}
+    - target: {fileID: 94260235464219452, guid: 44e54165d41e34c41ba73a629630ce03,
+        type: 3}
+      propertyPath: soldiers.Array.data[3]
+      value: 
+      objectReference: {fileID: 163460005}
     - target: {fileID: 3897109859127448212, guid: 44e54165d41e34c41ba73a629630ce03,
         type: 3}
       propertyPath: player

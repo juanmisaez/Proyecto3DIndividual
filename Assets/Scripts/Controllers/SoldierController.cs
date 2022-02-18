@@ -5,24 +5,35 @@ using UnityEngine;
 public class SoldierController : MonoBehaviour
 {
     private Rigidbody _rb;
-    private InputSystemKeyboard _input;
 
-    public float speed;
     public bool attack;
+
+    public float speed = 16;
+    public float goDistance = 25;
+
+    public GameObject[] soldiers;
+    public GameObject orc; // un ARRAY habrán más de uno o bien mediante LAYER o TAG
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _input = GetComponent<InputSystemKeyboard>();
     }
 
     void Update()
     {
-        _rb.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-
-        if (_input.hor != 0)
+        if (Vector3.Distance(transform.position, orc.transform.position) < goDistance)
         {
-            _rb.transform.Translate(Vector3.right * speed * _input.hor * Time.deltaTime);
+            SearchOrc();
+        }
+    }
+
+    void SearchOrc()
+    {
+        for (int s = 0; s < soldiers.Length; s++)
+        {
+            Debug.Log("soldado numero " + s + " ataca!"); //---<
+
+            transform.position = Vector3.MoveTowards(transform.position, orc.transform.position, speed * Time.deltaTime);
         }
     }
 }

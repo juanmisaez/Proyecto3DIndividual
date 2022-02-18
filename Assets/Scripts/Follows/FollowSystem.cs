@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowSystem : MonoBehaviour
+public class FollowSystem : MonoBehaviour // de los soldados
 {
     public float speed = 10;
     public float stoppingDistance = 2;
 
     public Transform player;
 
-    private bool follow;
+    public bool follow;
 
     void Update()
-    {        
+    {
         if(follow && Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);

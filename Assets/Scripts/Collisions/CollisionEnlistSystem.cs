@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class CollisionEnlistSystem : CollisionSystem
+public class CollisionEnlistSystem : CollisionSystem // soldados
 {
     protected override void OnCollision(Collision other)
     {
-        //other.gameObject.GetComponent<WriteNumSoldierSystem>()?.NewSoldier();
+        //other.gameObject.GetComponent<WriteNumSoldierSystem>()?.NewSoldier();        
 
         if (other.gameObject.tag.Equals("Player"))
             WriteNumSoldierSystem.ModifySoldierNum(1);

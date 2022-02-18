@@ -12,7 +12,6 @@ public class DeathSoldierSystem : DeathSystem
        // player.gameObject.GetComponent<WriteNumSoldierSystem>().DeadSoldier();
 
         WriteNumSoldierSystem.ModifySoldierNum(-1);
-
         gameObject.SetActive(false);
     }
 }
