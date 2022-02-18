@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _anim = GetComponent<Animator>();
         _input = GetComponent<InputSystemKeyboard>();
+
+        WriteNumSoldierSystem.ModifySoldierNum(0);
     }
 
     void Update()

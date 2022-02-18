@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CompanionController : MonoBehaviour
+public class SoldierController : MonoBehaviour
 {
     private Rigidbody _rb;
     private InputSystemKeyboard _input;
 
     public float speed;
+    public bool attack;
 
     private void Awake()
     {

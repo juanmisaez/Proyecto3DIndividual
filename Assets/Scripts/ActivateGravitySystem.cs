@@ -7,7 +7,7 @@ public class ActivateGravitySystem : MonoBehaviour
     private Rigidbody _rb;
     public Transform player;
 
-    public float fallDistance = 5;
+    public float fallDistance;
 
     private void Awake()
     {

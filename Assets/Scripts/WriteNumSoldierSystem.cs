@@ -3,32 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class WriteNumSoldierSystem : MonoBehaviour
+public static class WriteNumSoldierSystem
 {
-    public event Action<int> SoldierUpdated = delegate { };
+    public static event Action<int> SoldierUpdated = delegate { };
 
-    private int numSoldier = 0;
+    private static int numSoldier = 0;
 
-    private void Start()
+    public static void ModifySoldierNum(int toAdd)
     {
-        SoldierUpdated(GetNumSoldier());
-    }
+        numSoldier += toAdd;
 
-    public void NewSoldier()
-    {
-        numSoldier += 1;
-        SoldierUpdated(GetNumSoldier());
-    }
-
-    public void DeadSoldier()
-    {
-        numSoldier -= 1;
         if (numSoldier <= 0)
             numSoldier = 0;
+
         SoldierUpdated(GetNumSoldier());
     }
 
-    public int GetNumSoldier()
+    //public void NewSoldier()
+    //{
+    //    numSoldier += 1;
+    //    SoldierUpdated(GetNumSoldier());
+    //}
+
+    //public void DeadSoldier()
+    //{
+    //    numSoldier -= 1;
+    //    if (numSoldier <= 0)
+    //        numSoldier = 0;
+    //    SoldierUpdated(GetNumSoldier());
+    //}
+
+    public static int GetNumSoldier()
     {
         return numSoldier;
     }

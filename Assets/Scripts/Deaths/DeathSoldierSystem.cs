@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class DeathSoldierSystem : DeathSystem
 {
-    [SerializeField]
-    Transform player;
+    //[SerializeField]
+    //Transform player;
 
     protected override void Dead()
     {
-        player.gameObject.GetComponent<WriteNumSoldierSystem>().DeadSoldier();
+       // player.gameObject.GetComponent<WriteNumSoldierSystem>().DeadSoldier();
+
+        WriteNumSoldierSystem.ModifySoldierNum(-1);
+
         gameObject.SetActive(false);
     }
 }

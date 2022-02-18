@@ -14,7 +14,7 @@ public class CanvasUpdate : MonoBehaviour
         HealthUpdate(health);
     }
 
-    private void UpdateNumSoldier(int numSoldier)
+    private static void UpdateNumSoldier(int numSoldier)
     {
         NumSoldierUpdate(numSoldier);
     }
@@ -22,12 +22,12 @@ public class CanvasUpdate : MonoBehaviour
     void OnEnable()
     {
         GetComponent<HealthSystem>().LifeUpdated += UpdateHealth;
-        GetComponent<WriteNumSoldierSystem>().SoldierUpdated += UpdateNumSoldier;
+        WriteNumSoldierSystem.SoldierUpdated += UpdateNumSoldier;
     }
 
     void OnDisable()
     {
         GetComponent<HealthSystem>().LifeUpdated -= UpdateHealth;
-        GetComponent<WriteNumSoldierSystem>().SoldierUpdated -= UpdateNumSoldier;
+        WriteNumSoldierSystem.SoldierUpdated -= UpdateNumSoldier;
     }
 }
