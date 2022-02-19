@@ -19,5 +19,6 @@ public class RollingLog : MonoBehaviour
     void Update()
     {
         _rb.transform.Translate(Vector3.back * speed * Time.deltaTime);
+        //_rb.transform.Rotate(-5,0,0);
     }
 }

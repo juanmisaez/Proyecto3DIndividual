@@ -12,6 +12,7 @@ public class DeathSoldierSystem : DeathSystem
        // player.gameObject.GetComponent<WriteNumSoldierSystem>().DeadSoldier();
 
         WriteNumSoldierSystem.ModifySoldierNum(-1);
+        WriteNumSoldierSystem.RemoveToList(gameObject.GetComponent<SoldierController>()); // se manda a si mismo como el Controlador
         gameObject.SetActive(false);
     }
 }

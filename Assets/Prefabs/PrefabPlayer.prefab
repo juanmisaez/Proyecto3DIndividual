@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 7341601527318314087}
   - component: {fileID: 7257026068932945830}
   - component: {fileID: 7255483137659420139}
+  - component: {fileID: 6493684519651717398}
   - component: {fileID: 7257026068932945880}
   - component: {fileID: 7257026068932945831}
   - component: {fileID: 7255483137659420142}
@@ -338,6 +339,7 @@ GameObject:
   - component: {fileID: 7255483137659420128}
   - component: {fileID: -5256566176534605171}
   - component: {fileID: 4132674264337143546}
+  - component: {fileID: -4692811404349521328}
   m_Layer: 6
   m_Name: PrefabPlayer
   m_TagString: Untagged
@@ -410,6 +412,19 @@ CapsuleCollider:
   m_Height: 1.7255797
   m_Direction: 1
   m_Center: {x: 0, y: 0.8630581, z: 0}
+--- !u!135 &6493684519651717398
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255483137659420131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.317272
+  m_Center: {x: 0, y: 0, z: 4.817272}
 --- !u!114 &7257026068932945880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +544,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165c617a533fc6c418ab854a2b04f7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4692811404349521328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255483137659420131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c88b3d59e514e24db431a671f6bf9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 16
+  goDistance: 25
+  soldiers: []
+  orc: {fileID: 0}
 --- !u!1 &7255527186952901213
 GameObject:
   m_ObjectHideFlags: 0

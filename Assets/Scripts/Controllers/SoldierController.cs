@@ -6,13 +6,14 @@ public class SoldierController : MonoBehaviour
 {
     private Rigidbody _rb;
 
-    public bool attack;
+    public float speedCharge = 16;
+    public float speedFollow = 8;
+    public float stoppingDistance = 2;
+    bool attack;
+    bool follow;
 
-    public float speed = 16;
-    public float goDistance = 25;
-
-    public GameObject[] soldiers;
-    public GameObject orc; // un ARRAY habrán más de uno o bien mediante LAYER o TAG
+    public Transform player;
+    GameObject target;
 
     private void Awake()
     {
@@ -21,19 +22,29 @@ public class SoldierController : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, orc.transform.position) < goDistance)
+        if (attack)
         {
-            SearchOrc();
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speedCharge * Time.deltaTime);
+        }
+        else if (follow && Vector3.Distance(transform.position, player.position) > stoppingDistance)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speedFollow * Time.deltaTime);
         }
     }
 
-    void SearchOrc()
+    public void Attack(GameObject _orc)
     {
-        for (int s = 0; s < soldiers.Length; s++)
-        {
-            Debug.Log("soldado numero " + s + " ataca!"); //---<
+        attack = true;
+        target = _orc;
+    }
 
-            transform.position = Vector3.MoveTowards(transform.position, orc.transform.position, speed * Time.deltaTime);
-        }
+    void Follow(bool _follow)
+    {
+        follow = _follow;
+    }
+
+    private void OnEnable()
+    {
+        GetComponent<FollowSystem>().FollowPlayer += Follow;
     }
 }
