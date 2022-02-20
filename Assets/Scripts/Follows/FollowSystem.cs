@@ -5,11 +5,11 @@ using System;
 
 public class FollowSystem : MonoBehaviour // de los soldados
 {
-    public event Action<bool> FollowPlayer = delegate { }; // Al MenuSystem
+    public event Action<bool> FollowPlayer = delegate { };
 
     public bool follow;
 
-    public void Follow(int i)
+    public void Follow(int i) // le llega por el CollisionFollowSystem del player
     {
         if(i == 1)
         {
