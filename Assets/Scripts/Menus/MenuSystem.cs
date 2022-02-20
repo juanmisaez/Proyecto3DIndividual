@@ -30,12 +30,12 @@ public class MenuSystem : MonoBehaviour
 
     public void PlayGame()
     {
-        //SceneManager.LoadScene("Game"); // la escena del juego
+        SceneManager.LoadScene("GameLevel1"); // la escena del juego
     }
 
-    public void LoadMenu()
+    public void MainMenu()
     {
-        //SceneManager.LoadScene("MainMenu"); // la escena del menú de inicio
+        SceneManager.LoadScene("MainMenu"); // la escena del menú de inicio
     }
 
     public void Pause()
@@ -58,24 +58,24 @@ public class MenuSystem : MonoBehaviour
     {
         gameIsPaused = false;
         IsPaused(gameIsPaused);
-        //SceneManager.LoadScene("Game"); // nombre de la escena actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // nombre de la escena actual
     }
 
     public void NextLevel()
     {
-        //gameIsPaused = false;
-        //IsPaused(gameIsPaused);
-        //SceneManager.LoadScene("Game"); // nombre de siguiente escena
+        gameIsPaused = false;
+        IsPaused(gameIsPaused);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // nombre de siguiente escena
     }
 
-    public void GameOver()
+    void GameOver()
     {
         menuGameOverUI.SetActive(true);
         gameIsPaused = true;
         IsOver(gameIsPaused);
     }
 
-    public void Win()
+    void Win()
     {
         menuWinUI.SetActive(true);
         gameIsPaused = true;
@@ -86,7 +86,7 @@ public class MenuSystem : MonoBehaviour
     {
         gameIsPaused = false;
         IsPaused(gameIsPaused);
-        //SceneManager.LoadScene("Credits"); 
+        SceneManager.LoadScene("Credits"); 
     }
 
     public void QuitGame()
@@ -97,9 +97,13 @@ public class MenuSystem : MonoBehaviour
     void OnEnable()
     {
         InputSystemKeyboard.Paused += Menu;
+        FinishSystem.PlayerWin += Win;
+        FinishSystem.PlayerDead += GameOver;
     }
     void OnDisable()
     {
         InputSystemKeyboard.Paused -= Menu;
+        FinishSystem.PlayerWin -= Win;
+        FinishSystem.PlayerDead -= GameOver;
     }
 }
