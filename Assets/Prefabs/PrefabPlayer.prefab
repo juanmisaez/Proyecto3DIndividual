@@ -340,6 +340,7 @@ GameObject:
   - component: {fileID: -5256566176534605171}
   - component: {fileID: 4132674264337143546}
   - component: {fileID: -4692811404349521328}
+  - component: {fileID: 5750325293989706243}
   m_Layer: 6
   m_Name: PrefabPlayer
   m_TagString: Untagged
@@ -556,10 +557,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c88b3d59e514e24db431a671f6bf9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
-  goDistance: 25
-  soldiers: []
-  orc: {fileID: 0}
+  orc:
+  - {fileID: 0}
+--- !u!114 &5750325293989706243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255483137659420131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce38b8f16269cfb4683663989997056d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7255527186952901213
 GameObject:
   m_ObjectHideFlags: 0

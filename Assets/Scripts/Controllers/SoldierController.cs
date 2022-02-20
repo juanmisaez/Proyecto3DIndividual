@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SoldierController : MonoBehaviour
 {
-    private Rigidbody _rb;
+    private MoveSystem _move;
 
-    public float speedCharge = 16;
-    public float speedFollow = 8;
-    public float stoppingDistance = 2;
+    public float speedCharge;
+    public float stoppingDistance;
+
     bool attack;
     bool follow;
 
@@ -17,18 +17,18 @@ public class SoldierController : MonoBehaviour
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        _move = GetComponent<MoveSystem>();
     }
 
     void Update()
     {
         if (attack)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speedCharge * Time.deltaTime);
+            _move.ChargeOrc(target, speedCharge);
         }
         else if (follow && Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, speedFollow * Time.deltaTime);
+            _move.FollowPlayer(player);
         }
     }
 

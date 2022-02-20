@@ -4,27 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody _rb;
     private Animator _anim;
     private InputSystemKeyboard _input;
-
-    public float speed;
+    private MoveSystem _move;
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
         _anim = GetComponent<Animator>();
         _input = GetComponent<InputSystemKeyboard>();
-        //WriteNumSoldierSystem.ModifySoldierNum(0);
+        _move = GetComponent<MoveSystem>();
     }
 
     void Update()
     {
-        _rb.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        _move.MoveForward();
 
         if (_input.hor != 0)
         {
-            _rb.transform.Translate(Vector3.right * speed * _input.hor * Time.deltaTime);
+            _move.MoveRight(_input);
         }
     }
 

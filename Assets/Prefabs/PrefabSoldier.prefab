@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: -6063074518440010047}
   - component: {fileID: -3782355866053602298}
   - component: {fileID: -798416520308317950}
+  - component: {fileID: -5368310834422416485}
   m_Layer: 7
   m_Name: PrefabSoldier
   m_TagString: Untagged
@@ -546,9 +547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3215fdb6ff90f4542a2c3ccbfb91dfd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  stoppingDistance: 0
-  player: {fileID: 0}
   follow: 0
 --- !u!114 &3217949579685162158
 MonoBehaviour:
@@ -614,9 +612,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b048e1f48158624a86afd770582a95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
-  speed: 0
-  goDistance: 25
+  speedCharge: 16
+  stoppingDistance: 2
+  player: {fileID: 0}
+--- !u!114 &-5368310834422416485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928723031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce38b8f16269cfb4683663989997056d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 9
 --- !u!1 &1037657034
 GameObject:
   m_ObjectHideFlags: 0

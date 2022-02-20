@@ -12,7 +12,7 @@ public class CollisionSearchOrcSystem : MonoBehaviour
         {
             if (other.gameObject == orc[s])
             {
-                Charge(orc[s]); //-------------------------------------nombre
+                Charge(orc[s]);
             }
         }            
     }

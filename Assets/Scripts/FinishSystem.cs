@@ -7,7 +7,7 @@ public class FinishSystem : MonoBehaviour
     public void Victory()
     {
         Debug.Log("Has ganado!");
-        GetComponent<PlayerController>().speed = 0;
+        GetComponent<MoveSystem>().speed = 0;
     }
 
     public void GameOver()

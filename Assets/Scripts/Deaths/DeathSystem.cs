@@ -5,6 +5,11 @@ using System;
 
 public class DeathSystem : MonoBehaviour
 {
+    protected virtual void Dead()
+    {
+        gameObject.SetActive(false);
+    }
+
     void OnEnable()
     {
         GetComponent<HealthSystem>().Death += Dead;
@@ -13,10 +18,5 @@ public class DeathSystem : MonoBehaviour
     void OnDisable()
     {
         GetComponent<HealthSystem>().Death -= Dead;
-    }
-
-    protected virtual void Dead()
-    {
-        gameObject.SetActive(false);
     }
 }
