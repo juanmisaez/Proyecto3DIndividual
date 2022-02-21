@@ -30,6 +30,7 @@ public class MenuSystem : MonoBehaviour
 
     public void PlayGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("GameLevel1"); // escena del primer nivel
         WriteNumSoldierSystem.ClearList();
     }
@@ -59,6 +60,7 @@ public class MenuSystem : MonoBehaviour
     public void Retry()
     {
         gameIsPaused = false;
+        Time.timeScale = 1f;
         IsPaused(gameIsPaused);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // escena actual
         WriteNumSoldierSystem.ClearList();
@@ -75,6 +77,7 @@ public class MenuSystem : MonoBehaviour
     void GameOver()
     {
         menuGameOverUI.SetActive(true);
+        Time.timeScale = 0f;
         gameIsPaused = true;
         IsOver(gameIsPaused);
     }
@@ -82,6 +85,7 @@ public class MenuSystem : MonoBehaviour
     void Win()
     {
         menuWinUI.SetActive(true);
+        Time.timeScale = 0f;
         gameIsPaused = true;
         IsOver(gameIsPaused);
     }
@@ -96,6 +100,9 @@ public class MenuSystem : MonoBehaviour
 
     public void QuitGame()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
         Application.Quit();
     }
 

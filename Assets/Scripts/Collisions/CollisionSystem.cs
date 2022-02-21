@@ -15,5 +15,7 @@ public class CollisionSystem : MonoBehaviour
     protected virtual void OnCollision(Collision other)
     {
         other.gameObject.GetComponent<HealthSystem>()?.ReduceHealth(value);
+
+        // que vacie un corazón también??
     }
 }

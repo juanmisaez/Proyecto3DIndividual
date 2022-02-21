@@ -25,15 +25,16 @@ public class HealthSystem : MonoBehaviour
     public void ReduceHealth(int damage)
     {
         health -= damage;
+
         if (health <= 0)
         {
             health = 0;
-            LifeUpdated(health);
+            LifeUpdated(GetHealth());
             Death(); 
         }
         else
         {
-            LifeUpdated(health);
+            LifeUpdated(GetHealth());
         }
         Stumble();
     }
