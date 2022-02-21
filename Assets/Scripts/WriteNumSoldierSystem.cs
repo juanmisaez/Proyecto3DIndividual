@@ -5,33 +5,41 @@ using System;
 
 public static class WriteNumSoldierSystem
 {
-    public static event Action<int> SoldierUpdated = delegate { };
+    public static event Action/*<int>*/ SoldierUpdated = delegate { };
 
     public static List<SoldierController> soldiersList = new List<SoldierController>();
 
-    private static int numSoldier = 0;
+    //private static int numSoldier = 0;
 
-    public static void ModifySoldierNum(int toAdd)
+    /*public static void ModifySoldierNum(int toAdd)
     {
-        numSoldier += toAdd;
+        //numSoldier += toAdd;
 
-        if (numSoldier <= 0)
-            numSoldier = 0;
+        //if (numSoldier <= 0)
+        //    numSoldier = 0;
 
-        SoldierUpdated(GetNumSoldier());
-    }
+        SoldierUpdated(/*GetNumSoldier());
+    }*/
 
     public static void AddToList(SoldierController _soldier)
     {
         soldiersList.Insert(0, _soldier);
+        SoldierUpdated(/*GetNumSoldier()*/);
     }
     public static void RemoveToList(SoldierController _soldier)
     {
         soldiersList.Remove(_soldier);
+        SoldierUpdated(/*GetNumSoldier()*/);
+    }
+
+    public static void ClearList()
+    {
+        soldiersList.Clear();
     }
 
     public static int GetNumSoldier()
     {
-        return numSoldier;
+        //return numSoldier;
+        return soldiersList.Count;
     }
 }

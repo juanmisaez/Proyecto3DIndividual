@@ -9,22 +9,23 @@ public class InputSystemKeyboard : MonoBehaviour
 
     public float hor { get; private set; }
     public bool escape { get; private set; }
+    public bool space { get; private set; }
 
     bool over;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
         hor = Input.GetAxis("Horizontal");
         escape = Input.GetKeyDown(KeyCode.Escape);
+        space = Input.GetKeyDown(KeyCode.Space);
 
         if (escape && over == false)
         {
             Paused();
+        }
+        if(space)
+        {
+            WriteNumSoldierSystem.soldiersList[0].Charge();
         }
     }
 
@@ -36,11 +37,9 @@ public class InputSystemKeyboard : MonoBehaviour
     void OnEnable()
     {
         MenuSystem.IsOver += Over;
-
     }
     void OnDisable()
     {
         MenuSystem.IsOver -= Over;
-
     }
 }

@@ -11,6 +11,7 @@ public class SoldierController : MonoBehaviour
 
     bool attack;
     bool follow;
+    bool charge;
 
     public Transform player;
     GameObject target;
@@ -22,9 +23,13 @@ public class SoldierController : MonoBehaviour
 
     void Update()
     {
-        if (attack)
+        if (attack && !charge)
         {
             _move.ChargeOrc(target, speedCharge);
+        }
+        else if (follow && charge)
+        {
+            _move.ChargeForward(speedCharge);
         }
         else if (follow && Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
@@ -43,8 +48,18 @@ public class SoldierController : MonoBehaviour
         follow = _follow;
     }
 
-    private void OnEnable()
+    public void Charge()
+    {
+        charge = true;
+    }
+
+    void OnEnable()
     {
         GetComponent<FollowSystem>().FollowPlayer += Follow;
+    }
+
+    void OnDisable()
+    {
+        GetComponent<FollowSystem>().FollowPlayer -= Follow;
     }
 }

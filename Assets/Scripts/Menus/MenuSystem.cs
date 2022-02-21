@@ -30,12 +30,14 @@ public class MenuSystem : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("GameLevel1"); // la escena del juego
+        SceneManager.LoadScene("GameLevel1"); // escena del primer nivel
+        WriteNumSoldierSystem.ClearList();
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu"); // la escena del menú de inicio
+        SceneManager.LoadScene("MainMenu"); // escena del menú de inicio
+        WriteNumSoldierSystem.ClearList();
     }
 
     public void Pause()
@@ -58,14 +60,16 @@ public class MenuSystem : MonoBehaviour
     {
         gameIsPaused = false;
         IsPaused(gameIsPaused);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // nombre de la escena actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // escena actual
+        WriteNumSoldierSystem.ClearList();
     }
 
     public void NextLevel()
     {
         gameIsPaused = false;
         IsPaused(gameIsPaused);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // nombre de siguiente escena
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // siguiente escena
+        WriteNumSoldierSystem.ClearList();
     }
 
     void GameOver()
@@ -86,7 +90,8 @@ public class MenuSystem : MonoBehaviour
     {
         gameIsPaused = false;
         IsPaused(gameIsPaused);
-        SceneManager.LoadScene("Credits"); 
+        SceneManager.LoadScene("Credits");
+        WriteNumSoldierSystem.ClearList();
     }
 
     public void QuitGame()

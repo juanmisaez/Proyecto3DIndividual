@@ -18,7 +18,7 @@ public class CollisionEnlistSystem : CollisionSystem // soldados
 
         if (other.gameObject.tag.Equals("Player") && follow.follow == false)
         {
-            WriteNumSoldierSystem.ModifySoldierNum(1);
+           // WriteNumSoldierSystem.ModifySoldierNum(1);
             WriteNumSoldierSystem.AddToList(gameObject.GetComponent<SoldierController>()); // se manda a si mismo como el Controlador
         }
     }

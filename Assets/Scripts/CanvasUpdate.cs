@@ -7,16 +7,16 @@ using System;
 public class CanvasUpdate : MonoBehaviour
 {
     public static event Action<int> HealthUpdate = delegate { };
-    public static event Action<int> NumSoldierUpdate = delegate { };
+    public static event Action/*<int>*/ NumSoldierUpdate = delegate { };
 
     private void UpdateHealth(int health)
     {
         HealthUpdate(health);
     }
 
-    private static void UpdateNumSoldier(int numSoldier)
+    private static void UpdateNumSoldier(/*int numSoldier*/)
     {
-        NumSoldierUpdate(numSoldier);
+        NumSoldierUpdate(/*numSoldier*/);
     }
 
     void OnEnable()

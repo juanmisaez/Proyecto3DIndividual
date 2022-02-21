@@ -12,9 +12,10 @@ public class SoldierInfo : MonoBehaviour
         numSoldier = GetComponent<Text>();
     }
 
-    private void UpdateNumSoldier(int _numSoldier)
+    private void UpdateNumSoldier(/*int _numSoldier*/)
     {
-        numSoldier.text = "SOLDADOS: " + _numSoldier;
+        //numSoldier.text = "SOLDADOS: " + _numSoldier;
+        numSoldier.text = "SOLDADOS: " + WriteNumSoldierSystem.GetNumSoldier();
     }
 
     void OnEnable()

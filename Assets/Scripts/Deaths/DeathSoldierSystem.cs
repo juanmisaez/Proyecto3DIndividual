@@ -10,8 +10,8 @@ public class DeathSoldierSystem : DeathSystem
     protected override void Dead()
     {
        // player.gameObject.GetComponent<WriteNumSoldierSystem>().DeadSoldier();
+        //WriteNumSoldierSystem.ModifySoldierNum(-1);
 
-        WriteNumSoldierSystem.ModifySoldierNum(-1);
         WriteNumSoldierSystem.RemoveToList(gameObject.GetComponent<SoldierController>()); // se manda a si mismo como el Controlador
         gameObject.SetActive(false);
     }

@@ -37,4 +37,9 @@ public class MoveSystem : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, _speedCharge * Time.deltaTime);
     }
+
+    public void ChargeForward(float _speedCharge) // Soldier
+    {
+        _rb.transform.Translate(Vector3.forward * _speedCharge * Time.deltaTime);
+    }
 }
