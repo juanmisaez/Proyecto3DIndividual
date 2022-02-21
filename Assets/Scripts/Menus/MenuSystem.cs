@@ -69,6 +69,7 @@ public class MenuSystem : MonoBehaviour
     public void NextLevel()
     {
         gameIsPaused = false;
+        Time.timeScale = 1f;
         IsPaused(gameIsPaused);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // siguiente escena
         WriteNumSoldierSystem.ClearList();
