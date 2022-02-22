@@ -23,33 +23,7 @@ public class HeartSystem : MonoBehaviour
     {
         maxHealth = _healthSystem.GetMaxHealth();
         health = _healthSystem.GetHealth();
-    }
-
-    /*void Update()
-    {
-        //maxHealth = _healthSystem.GetMaxHealth();
-        //health = _healthSystem.GetHealth();
-
-        Debug.Log("Vida: " + health); // no le da tiempo a que le llegue el 0, muere antes
-
-        if (health > maxHealth)
-            health = maxHealth;
-
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            // Para vaciar los corazones
-            if (i < health)
-                hearts[i].sprite = fullHeart;
-            else
-                hearts[i].sprite = emptyHeart;
-
-            // Para ampliar o reducir la vida máxima
-            if (i < maxHealth)
-                hearts[i].enabled = true;
-            else
-                hearts[i].enabled = false;
-        }
-    }*/
+    }    
 
     private void UpdateHealth(int _health)
     {
@@ -65,6 +39,7 @@ public class HeartSystem : MonoBehaviour
                 hearts[i].sprite = emptyHeart;
         }
     }
+
     private void UpdateMaxHealth(int _maxHealth)
     {
         if (health > _maxHealth)

@@ -6,7 +6,9 @@ public class CollisionGoal : CollisionSystem
 {
     protected override void OnCollision(Collision other)
     {
-        //activa el menú de victoria
-        other.gameObject.GetComponent<FinishSystem>()?.Victory();
+        if(WriteNumSoldierSystem.GetNumSoldier() < value)
+            other.gameObject.GetComponent<FinishSystem>()?.GameOver();
+        else
+            other.gameObject.GetComponent<FinishSystem>()?.Victory();
     }
 }

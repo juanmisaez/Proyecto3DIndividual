@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoldierController : MonoBehaviour
 {
     private MoveSystem _move;
+    private ParticleSystem _particle;
 
     public float speedCharge;
     public float stoppingDistance;
@@ -19,16 +20,24 @@ public class SoldierController : MonoBehaviour
     private void Awake()
     {
         _move = GetComponent<MoveSystem>();
+        _particle = GetComponent<ParticleSystem>();
+    }
+
+    void Start()
+    {
+        _particle.Pause();
     }
 
     void Update()
     {
         if (attack && !charge)
         {
+            _particle.Play();
             _move.ChargeOrc(target, speedCharge);
         }
         else if (follow && charge)
         {
+            _particle.Play();
             _move.ChargeForward(speedCharge);
         }
         else if (follow && Vector3.Distance(transform.position, player.position) > stoppingDistance)
