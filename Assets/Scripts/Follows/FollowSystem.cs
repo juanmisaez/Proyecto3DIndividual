@@ -16,5 +16,10 @@ public class FollowSystem : MonoBehaviour // de los soldados
             follow = true;
             FollowPlayer(follow);
         }
+        else
+        {
+            follow = false;
+            FollowPlayer(follow);
+        }
     }
 }

@@ -8,7 +8,7 @@ public class DeathSystem : MonoBehaviour
     protected virtual void Dead()
     {
         gameObject.GetComponent<FinishSystem>()?.GameOver(); // solo al Player
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     void OnEnable()

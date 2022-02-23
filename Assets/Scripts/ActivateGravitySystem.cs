@@ -19,7 +19,15 @@ public class ActivateGravitySystem : MonoBehaviour
         if (Vector3.Distance(transform.position, player.position) < fallDistance)
         {
             _rb.useGravity = true;
-            //FindObjectOfType<AudioManager>().Play("TreeFall");
+            //SoundActivate();
         }
     }
+
+    /*void SoundActivate()
+    {
+        if (gameObject.tag == "Tree")
+        {
+            //FindObjectOfType<AudioManager>().Play("TreeFall");
+        }
+    }*/
 }

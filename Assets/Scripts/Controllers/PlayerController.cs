@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
     private Animator _anim;
     private InputSystemKeyboard _input;
     private MoveSystem _move;
+    private PlaySoundSystem _playSound;
 
     private void Awake()
     {
         _anim = GetComponent<Animator>();
         _input = GetComponent<InputSystemKeyboard>();
         _move = GetComponent<MoveSystem>();
+        _playSound = GetComponent<PlaySoundSystem>();
     }
 
     void Update()
@@ -25,18 +27,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Tripping()
+    void Stumble()
     {
         _anim.SetBool("hit", true);
+        _playSound.PlaySound("Player", "PlayerHurt");
     }
 
     void OnEnable()
     {
-        GetComponent<HealthSystem>().Stumble += Tripping;
+        GetComponent<HealthSystem>().Hit += Stumble;
     }
 
     void OnDisable()
     {
-        GetComponent<HealthSystem>().Stumble -= Tripping;
+        GetComponent<HealthSystem>().Hit -= Stumble;
     }
 }

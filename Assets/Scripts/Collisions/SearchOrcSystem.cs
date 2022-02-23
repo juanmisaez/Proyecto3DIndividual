@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionSearchOrcSystem : MonoBehaviour
+public class SearchOrcSystem : MonoBehaviour
 {    
     public GameObject[] orc;
         

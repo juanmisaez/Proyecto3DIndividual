@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 4132674264337143546}
   - component: {fileID: -4692811404349521328}
   - component: {fileID: 5750325293989706243}
+  - component: {fileID: 6143961205813549403}
   m_Layer: 6
   m_Name: PrefabPlayer
   m_TagString: Untagged
@@ -397,7 +398,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!136 &7255483137659420139
 CapsuleCollider:
@@ -438,7 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38941dec09b9fa649a6c3ab21719f4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &7257026068932945831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,6 +569,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce38b8f16269cfb4683663989997056d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+--- !u!114 &6143961205813549403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255483137659420131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081d859c02dd3c469c4f3b274566006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7255527186952901213
