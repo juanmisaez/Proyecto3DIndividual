@@ -33,12 +33,14 @@ public class MenuSystem : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("GameLevel1"); // escena del primer nivel
         WriteNumSoldierSystem.ClearList();
+        GC.Collect();
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu"); // escena del menú de inicio
         WriteNumSoldierSystem.ClearList();
+        GC.Collect();
     }
 
     public void Pause()
@@ -64,6 +66,7 @@ public class MenuSystem : MonoBehaviour
         IsPaused(gameIsPaused);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // escena actual
         WriteNumSoldierSystem.ClearList();
+        GC.Collect();
     }
 
     public void NextLevel()
@@ -73,6 +76,7 @@ public class MenuSystem : MonoBehaviour
         IsPaused(gameIsPaused);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // siguiente escena
         WriteNumSoldierSystem.ClearList();
+        GC.Collect();
     }
 
     void GameOver()
@@ -97,6 +101,7 @@ public class MenuSystem : MonoBehaviour
         IsPaused(gameIsPaused);
         SceneManager.LoadScene("Credits");
         WriteNumSoldierSystem.ClearList();
+        GC.Collect();
     }
 
     public void QuitGame()

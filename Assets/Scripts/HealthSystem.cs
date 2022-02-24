@@ -27,15 +27,18 @@ public class HealthSystem : MonoBehaviour
     /// <param name="damage"></param>
     public void ReduceHealth(int damage)
     {
-        //GetComponent<PlaySoundSystem>().PlaySound("Player", "PlayerHurt");
-
         health -= damage;
+
+        //--Player_Invulnerable--
+#if __DEBUG_AVAILABLE__
+        if (CheatsSystem.modeInvincible && gameObject.tag == "Player")
+        {
+            health += damage;
+        }
+#endif
 
         if (health <= 0)
         {
-            //GetComponent<PlaySoundSystem>().PlaySound("Orc", "OrcHurt");
-            //GetComponent<PlaySoundSystem>().PlaySound("Soldier", "SoldierHit");
-
             health = 0;
             LifeUpdated(GetHealth());
             Death(); 
