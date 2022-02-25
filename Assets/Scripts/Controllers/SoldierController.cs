@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SoldierController : MonoBehaviour
 {
+    public event Action<Vector3> PlayParticle = delegate { }; // Al MenuSystem
+
     private Animator _anim;
     private MoveSystem _move;
     private CapsuleCollider _capsuleCollider;
-    private ParticleSystem _particle;
     private PlaySoundSystem _playSound;
 
     public float speedCharge;
@@ -25,25 +27,19 @@ public class SoldierController : MonoBehaviour
         _anim = GetComponent<Animator>();
         _move = GetComponent<MoveSystem>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
-        _particle = GetComponent<ParticleSystem>();
         _playSound = GetComponent<PlaySoundSystem>();
-    }
-
-    void Start()
-    {
-        _particle.Pause();
     }
 
     void Update()
     {
         if (attack && !charge)
         {
-            _particle.Play();
+            PlayParticle(gameObject.transform.position);
             _move.ChargeOrc(target, speedCharge);
         }
         else if (follow && charge)
         {
-            _particle.Play();
+            PlayParticle(gameObject.transform.position);
             _move.ChargeForward(speedCharge);
         }
         else if (follow && Vector3.Distance(transform.position, player.position) > stoppingDistance)

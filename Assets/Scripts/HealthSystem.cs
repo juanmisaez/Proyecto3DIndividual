@@ -11,6 +11,8 @@ public class HealthSystem : MonoBehaviour
     public event Action<int> MaxLifeUpdated = delegate { };
     public event Action Hit = delegate { };
 
+    public static bool modeInvincible;
+
     [SerializeField]
     private int maxHealth;
     [SerializeField]
@@ -24,18 +26,17 @@ public class HealthSystem : MonoBehaviour
     /// <summary>
     /// Reduce la vida
     /// </summary>
-    /// <param name="damage"></param>
+    /// <param name="damage">aaa</param>
     public void ReduceHealth(int damage)
     {
         health -= damage;
 
         //--Player_Invulnerable--
-#if __DEBUG_AVAILABLE__
-        if (CheatsSystem.modeInvincible && gameObject.tag == "Player")
+
+        if (/*CheatsSystem.modeInvincible*/modeInvincible && gameObject.tag == "Player")
         {
             health += damage;
         }
-#endif
 
         if (health <= 0)
         {
