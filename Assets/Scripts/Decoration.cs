@@ -19,8 +19,8 @@ public class Decoration : MonoBehaviour
     [SerializeField]
     private Tree[] rightTrees;
 
-    private float y1 = 0;//-4.9f;
-    private float y2 = 4;//-4.5f;
+    //private float y1 = 0;//-4.9f;
+    //private float y2 = 4;//-4.5f;
 
     private float leftX1 = -28f;
     private float leftX2 = -6f;
@@ -29,7 +29,7 @@ public class Decoration : MonoBehaviour
     private float rightX2 = 33f;
 
     private float z1 = 0f;
-    private float z2 = 120f;
+    private float z2 = 350f;
 
     /*private float distanceZ1 = 7.5f;
     private float distanceZ2 = 12f;*/

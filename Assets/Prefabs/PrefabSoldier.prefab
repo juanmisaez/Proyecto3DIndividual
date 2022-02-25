@@ -457,12 +457,12 @@ GameObject:
   - component: {fileID: 6964322774570071886}
   - component: {fileID: 4714091941673964517}
   - component: {fileID: 7638005055173329687}
+  - component: {fileID: -5368310834422416485}
+  - component: {fileID: -798416520308317950}
   - component: {fileID: 3217949579685162158}
   - component: {fileID: 3897109859127448212}
   - component: {fileID: -6063074518440010047}
   - component: {fileID: -3782355866053602298}
-  - component: {fileID: -798416520308317950}
-  - component: {fileID: -5368310834422416485}
   - component: {fileID: 3472094391824710043}
   - component: {fileID: 4406381795625691279}
   m_Layer: 7
@@ -550,6 +550,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follow: 0
+--- !u!114 &-5368310834422416485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928723031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce38b8f16269cfb4683663989997056d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 9
+--- !u!114 &-798416520308317950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928723031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b048e1f48158624a86afd770582a95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedCharge: 16
+  stoppingDistance: 2
+  player: {fileID: 0}
 --- !u!114 &3217949579685162158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,34 +630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
---- !u!114 &-798416520308317950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928723031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b048e1f48158624a86afd770582a95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedCharge: 16
-  stoppingDistance: 2
-  player: {fileID: 0}
---- !u!114 &-5368310834422416485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928723031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce38b8f16269cfb4683663989997056d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 9
 --- !u!114 &3472094391824710043
 MonoBehaviour:
   m_ObjectHideFlags: 0

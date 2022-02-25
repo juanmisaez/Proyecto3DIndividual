@@ -7,7 +7,7 @@ public class CollisionDeathOrc : CollisionSystem
 {
     protected override void OnCollision(Collision other)
     {
-        if (other.gameObject.tag == "Orc")
+        if (other.gameObject.tag == "Orc" || other.gameObject.tag == "Tree")
         {
             other.gameObject.GetComponent<HealthSystem>()?.ReduceHealth(value);
         }

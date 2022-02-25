@@ -23,17 +23,13 @@ public class HealthSystem : MonoBehaviour
         LifeUpdated(GetHealth());
         MaxLifeUpdated(GetMaxHealth());
     }        
-    /// <summary>
-    /// Reduce la vida
-    /// </summary>
-    /// <param name="damage">aaa</param>
+
     public void ReduceHealth(int damage)
     {
         health -= damage;
 
         //--Player_Invulnerable--
-
-        if (/*CheatsSystem.modeInvincible*/modeInvincible && gameObject.tag == "Player")
+        if (modeInvincible && gameObject.tag == "Player")
         {
             health += damage;
         }

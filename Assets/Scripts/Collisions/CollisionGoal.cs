@@ -10,5 +10,10 @@ public class CollisionGoal : CollisionSystem
             other.gameObject.GetComponent<FinishSystem>()?.GameOver();
         else
             other.gameObject.GetComponent<FinishSystem>()?.Victory();
+
+        if (other.gameObject.tag == "Soldier")
+        {
+            other.gameObject.GetComponent<MoveSystem>().speed = 0;
+        }
     }
 }
