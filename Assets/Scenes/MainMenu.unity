@@ -650,10 +650,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 399117678}
-        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
+      - m_Target: {fileID: 354478039}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 170264344}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -813,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 363}
+  m_AnchoredPosition: {x: -0.000061035156, y: 419}
   m_SizeDelta: {x: -809.676, y: -840.077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719014407
@@ -1117,7 +1129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -433.4917, y: -44.258698}
+  m_AnchoredPosition: {x: -433.4917, y: 87}
   m_SizeDelta: {x: -1034.3739, y: -635.8061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106074855
@@ -1142,7 +1154,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 10a3324c6bb26b9478b3b9276324abfe, type: 3}
-    m_FontSize: 130
+    m_FontSize: 110
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1153,8 +1165,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0.45
-  m_Text: "Evita a los orcos y sus obst\xE1culos.\n\nConsigue alcanzar el final del
-    camino con los soldados necesarios."
+  m_Text: "Consigue alcanzar el final del camino con los soldados necesarios.\n\nEvita
+    a los orcos y sus obst\xE1culos.\n\nManda soldados para que carguen y eliminen
+    los troncos del camino.\n\nSi un soldado ve un orco, cargar\xE1 hacia \xE9l de
+    forma autom\xE1tica."
 --- !u!222 &1106074856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1678,7 +1692,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1753015336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 354478039}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 170264344}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1753015336
 MonoBehaviour:
   m_ObjectHideFlags: 0

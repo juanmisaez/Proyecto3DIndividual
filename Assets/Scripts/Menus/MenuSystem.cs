@@ -43,6 +43,11 @@ public class MenuSystem : MonoBehaviour
         GC.Collect();
     }
 
+    public void Instructions()
+    {
+
+    }
+
     public void Pause()
     {
         menuPauseUI.SetActive(true);

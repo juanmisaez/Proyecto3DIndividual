@@ -10,14 +10,12 @@ public class FinishSystem : MonoBehaviour
 
     public void Victory()
     {
-        Debug.Log("Has ganado!");
         GetComponent<MoveSystem>().speed = 0;
         PlayerWin();
     }
 
     public void GameOver()
     {
-        Debug.Log("Has perdido");
         PlayerDead();
     }
 }

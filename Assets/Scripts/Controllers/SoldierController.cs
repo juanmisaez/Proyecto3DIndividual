@@ -5,7 +5,8 @@ using System;
 
 public class SoldierController : MonoBehaviour
 {
-    public event Action<Vector3> PlayParticle = delegate { }; // Al MenuSystem
+    public event Action<Vector3> PlayParticle = delegate { }; // Al Particle
+    public event Action StopParticle = delegate { }; // Al Particle
 
     private Animator _anim;
     private MoveSystem _move;
@@ -70,6 +71,9 @@ public class SoldierController : MonoBehaviour
         _playSound.PlaySound("Soldier", "SoldierHit");
         _anim.SetBool("hit", true);
         _capsuleCollider.enabled = false;
+        attack = false;
+        follow = false;
+        StopParticle();
     }
 
     void OnEnable()

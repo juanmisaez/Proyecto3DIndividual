@@ -11,12 +11,19 @@ public class Particles : MonoBehaviour
         Instantiate(particle, position, Quaternion.Euler(0, 0, 0));
     }
 
+    public void StopParticle()
+    {
+        //Destroy(particle);
+    }
+
     private void OnEnable()
     {
-        GetComponent<SoldierController>().PlayParticle += PlayParticle;        
+        GetComponent<SoldierController>().PlayParticle += PlayParticle;
+        GetComponent<SoldierController>().StopParticle += StopParticle;
     }
     private void OnDisable()
     {
         GetComponent<SoldierController>().PlayParticle -= PlayParticle;
+        GetComponent<SoldierController>().StopParticle -= StopParticle;
     }
 }
