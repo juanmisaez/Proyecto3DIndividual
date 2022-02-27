@@ -583,7 +583,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: '#if;__DEBUG_AVAILABLE__'
+    1: //#if;__DEBUG_AVAILABLE__
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
